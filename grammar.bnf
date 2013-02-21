@@ -1,4 +1,4 @@
-turtleDoc 	::= 	statement*
+[1]	turtleDoc 	::= 	statement*
 [2] 	statement 	::= 	directive | triples '.'
 [3] 	directive 	::= 	prefixID | base | sparqlPrefix | sparqlBase
 [4] 	prefixID 	::= 	'@prefix' PNAME_NS IRIREF '.'
