@@ -1,0 +1,29 @@
+'('
+')'
+','
+'.'
+';'
+'@base'
+'@prefix'
+'BASE' (case insensitive)
+'PREFIX' (case insensitive)
+'['
+']'
+'^^'
+'a'
+'false'
+'true'
+ANON
+BLANK_NODE_LABEL
+DECIMAL
+DOUBLE
+INTEGER
+IRIREF
+LANGTAG
+PNAME_LN
+PNAME_NS
+PrefixedName
+STRING_LITERAL_LONG_QUOTE
+STRING_LITERAL_LONG_SINGLE_QUOTE
+STRING_LITERAL_QUOTE
+STRING_LITERAL_SINGLE_QUOTE
