@@ -30,18 +30,24 @@ Terminals Only used inside terminals
     PLX ::= '%' HEX HEX | '\' ('_' | '~' | '.' | '-' | '!' | '$' | '&' | "'" | '(' | ')' | '*' | '+' | ',' | ';' | '=' | '/' | '?' | '#' | '@' | '%')
     HEX              ::= [0-9] | [A-F] | [a-f]
 
-Name terminals
---------------
+Blank node names
+----------------
 
     BN_LABEL         ::= BN_LABEL_START (BN_LABEL_MIDDLE* BN_LABEL_LAST)?
     BN_LABEL_START   ::= PN_CHARS_BASE | '_' | [0-9]
     BN_LABEL_MIDDLE  ::= PN_CHARS | '.'
     BN_LABEL_LAST    ::= PN_CHARS
 
+Prefixed name
+-------------
+
     PN_PREFIX        ::= PN_PREFIX_START (PN_PREFIX_MIDDLE* PN_PREFIX_LAST)?
     PN_PREFIX_START  ::= PN_CHARS_BASE
     PN_PREFIX_MIDDLE ::= PN_CHARS | '.'
     PN_PREFIX_LAST   ::= PN_CHARS
+
+Local name
+----------
 
     PN_LOCAL         ::= PN_LOCAL_START (PN_LOCAL_MIDDLE* PN_LOCAL_LAST)?
     PN_LOCAL_START   ::= PN_CHARS_BASE | '_' | ':' | [0-9] | PLX
