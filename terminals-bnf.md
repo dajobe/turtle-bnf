@@ -2,10 +2,7 @@ Terminals Used by the grammar
 =============================
 
     ANON                    ::= '[' WS* ']'
-    BLANK_NODE_LABEL        ::= '_:' BLANK_NODE_LABEL_START (BLANK_NODE_LABEL_MIDDLE* BLANK_NODE_LABEL_LAST)?
-    BLANK_NODE_LABEL_START  ::= PN_CHARS_BASE | '_' | [0-9]
-    BLANK_NODE_LABEL_MIDDLE ::= PN_CHARS | '.'
-    BLANK_NODE_LABEL_LAST   ::= PN_CHARS
+    BLANK_NODE_LABEL        ::= '_:' BN_LABEL
     DECIMAL                 ::= [+-]? [0-9]* '.' [0-9]+
     DOUBLE                  ::= [+-]? ([0-9]+ '.' [0-9]* EXPONENT | '.' [0-9]+ EXPONENT | [0-9]+ EXPONENT)
     INTEGER                 ::= [+-]? [0-9]+
@@ -30,6 +27,10 @@ Terminals Only used inside terminals
     WS               ::= #x20 | #x9 | #xD | #xA
     PN_CHARS_BASE    ::= [A-Z] | [a-z] | [#x00C0-#x00D6] | [#x00D8-#x00F6] | [#x00F8-#x02FF] | [#x0370-#x037D] | [#x037F-#x1FFF] | [#x200C-#x200D] | [#x2070-#x218F] | [#x2C00-#x2FEF] | [#x3001-#xD7FF] | [#xF900-#xFDCF] | [#xFDF0-#xFFFD] | [#x10000-#xEFFFF]
     PN_CHARS         ::= PN_CHARS_BASE | '_' | '-' | [0-9] | #x00B7 | [#x0300-#x036F] | [#x203F-#x2040]
+	BN_LABEL         ::= BN_LABEL_START (BN_LABEL_MIDDLE* BN_LABEL_LAST)?
+    BN_LABEL_START   ::= PN_CHARS_BASE | '_' | [0-9]
+    BN_LABEL_MIDDLE  ::= PN_CHARS | '.'
+    BN_LABEL_LAST    ::= PN_CHARS
     PN_PREFIX        ::= PN_PREFIX_START (PN_PREFIX_MIDDLE* PN_PREFIX_LAST)?
     PN_PREFIX_START  ::= PN_CHARS_BASE
     PN_PREFIX_MIDDLE ::= PN_CHARS | '.'
