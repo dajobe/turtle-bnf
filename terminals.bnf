@@ -26,6 +26,9 @@ PN_CHARS_BASE  ::=  [A-Z] | [a-z] | [#x00C0-#x00D6] | [#x00D8-#x00F6] | [#x00F8-
 PN_CHARS_U  ::=  PN_CHARS_BASE | '_'
 PN_CHARS  ::=  PN_CHARS_U | '-' | [0-9] | #x00B7 | [#x0300-#x036F] | [#x203F-#x2040]
 PN_PREFIX  ::=  PN_CHARS_BASE ((PN_CHARS | '.')* PN_CHARS)?
-PN_LOCAL  ::=  (PN_CHARS_U | ':' | [0-9] | PLX) ((PN_CHARS | '.' | ':' | PLX)* (PN_CHARS | ':' | PLX))?
+PN_LOCAL        ::= PN_LOCAL_START (PN_LOCAL_MIDDLE* PN_LOCAL_LAST)?
+PN_LOCAL_START  ::= PN_CHARS_U | ':' | [0-9] | PLX
+PN_LOCAL_MIDDLE ::= PN_CHARS | '.' | ':' | PLX
+PN_LOCAL_LAST   ::= PN_CHARS | ':' | PLX
 PLX  ::=  '%' HEX HEX | '\' ('_' | '~' | '.' | '-' | '!' | '$' | '&' | "'" | '(' | ')' | '*' | '+' | ',' | ';' | '=' | '/' | '?' | '#' | '@' | '%')
 HEX  ::=  [0-9] | [A-F] | [a-f]
