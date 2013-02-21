@@ -1,7 +1,10 @@
 Used by the grammar:
 
 ANON  ::=  '[' WS* ']'
-BLANK_NODE_LABEL  ::=  '_:' (PN_CHARS_U | [0-9]) ((PN_CHARS | '.')* PN_CHARS)?
+BLANK_NODE_LABEL  ::=  '_:' BLANK_NODE_LABEL_START (BLANK_NODE_LABEL_MIDDLE* BLANK_NODE_LABEL_LAST)?
+BLANK_NODE_LABEL_START  ::=  PN_CHARS_U | [0-9]
+BLANK_NODE_LABEL_MIDDLE ::= PN_CHARS | '.'
+BLANK_NODE_LABEL_LAST   ::=  PN_CHARS
 DECIMAL  ::=  [+-]? [0-9]* '.' [0-9]+
 DOUBLE  ::=  [+-]? ([0-9]+ '.' [0-9]* EXPONENT | '.' [0-9]+ EXPONENT | [0-9]+ EXPONENT)
 INTEGER  ::=  [+-]? [0-9]+
