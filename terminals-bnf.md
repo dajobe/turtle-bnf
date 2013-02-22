@@ -76,7 +76,7 @@ http://www.w3.org/TR/2012/PR-sparql11-query-20121108/#rVARNAME
 
     VARNAME       ::= VARNAME_START VARNAME_REST*
     VARNAME_START ::= PN_CHARS_BASE | '_' | [0-9]
-    VARNAME_REST  ::= PN_CHARS_BASE | '_' | [0-9] | #x00B7 | [#x0300-#x036F] | [#x203F-#x2040]
+    VARNAME_REST  ::= PN_CHARS EXCLUDING '-'
 
 
 General name checking rules
