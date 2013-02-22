@@ -65,8 +65,16 @@ XML 1.1 QNames
 --------------
 
     XML_START  ::= PN_CHARS_BASE | '_'
-	XML_MIDDLE ::= PN_CHARS | '.'
-	XML_LAST   ::= PN_CHARS | '.'
+    XML_MIDDLE ::= PN_CHARS | '.'
+    XML_LAST   ::= PN_CHARS | '.'
+
+
+SPARQL 1.1 VarName
+------------------
+
+http://www.w3.org/TR/2012/PR-sparql11-query-20121108/#rVARNAME
+
+    [166] VARNAME ::= ( PN_CHARS_U | [0-9] ) ( PN_CHARS_U | [0-9] | #x00B7 | [#x0300-#x036F] | [#x203F-#x2040] )*
 
 
 General name checking rules
@@ -78,6 +86,6 @@ Default (Prefixed name rules):
    * Last: *PN_CHARS* always
 
 Flags:
-   1. Allow _ and [0-9] at start
-   3. Allow ':' and hex and '\'+escapes everywhere
-   4. Allow '.' at end
+   1. Allow _ and [0-9] at start (blank node; local name)
+   3. Allow ':' and hex and '\'+escapes everywhere (local name)
+   4. Allow '.' at end (XML name)
