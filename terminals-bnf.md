@@ -60,6 +60,17 @@ Local name
     PN_LOCAL_MIDDLE  ::= PN_CHARS | '.' | ':' | PLX
     PN_LOCAL_LAST    ::= PN_CHARS | ':' | PLX
 
+
+XML 1.1 QNames
+--------------
+
+    XML_NAME_BASE   ::= [A-Za-z_] + lots of Unicode ranges
+
+    XML_START  ::= XML_NAME_BASE
+	XML_MIDDLE ::= XML_NAME_BASE | '.' | '-' | [0-9] | #xB7 | #x300-#x367 | #x203F-#x2040
+	XML_LAST   ::= XML_MIDDLE
+
+
 General name checking rules
 ---------------------------
 
@@ -69,5 +80,5 @@ General name checking rules
 
 Flags:
    1. Allow _ and [0-9] at start
-   2. Allow '.' at middle
+   2. Allow '.' at middle (XML allows this always)
    3. Allow ':' and PLX (hex and '\' + escapes) everywhere
