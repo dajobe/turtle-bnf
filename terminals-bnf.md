@@ -56,6 +56,6 @@ Local name
 ----------
 
     PN_LOCAL         ::= PN_LOCAL_START (PN_LOCAL_MIDDLE* PN_LOCAL_LAST)?
-    PN_LOCAL_START   ::= PN_CHARS_BASE | '_' | ':' | [0-9] | PLX
+    PN_LOCAL_START   ::= PN_CHARS_BASE | '_' | [0-9] | ':' | PLX
     PN_LOCAL_MIDDLE  ::= PN_CHARS | '.' | ':' | PLX
     PN_LOCAL_LAST    ::= PN_CHARS | ':' | PLX
