@@ -72,11 +72,12 @@ XML 1.1 QNames
 General name checking rules
 ---------------------------
 
+Default (Prefixed name rules):
    * Start: *PN_CHARS_BASE* with flags
-   * Middle; *PN_CHARS* with flags
+   * Middle: *PN_CHARS* | '.' (same as XML namechar) with flags
    * Last: *PN_CHARS* always
 
 Flags:
    1. Allow _ and [0-9] at start
-   2. Allow '.' at middle (XML allows this always)
-   3. Allow ':' and PLX (hex and '\' + escapes) everywhere
+   3. Allow ':' and hex and '\'+escapes everywhere
+   4. Allow '.' at end
