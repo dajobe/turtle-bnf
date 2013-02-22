@@ -64,10 +64,8 @@ Local name
 XML 1.1 QNames
 --------------
 
-    XML_NAME_BASE   ::= PN_CHARS_BASE | '_'
-
-    XML_START  ::= XML_NAME_BASE
-	XML_MIDDLE ::= XML_NAME_BASE | '.' | '-' | [0-9] | #xB7 | #x300-#x367 | #x203F-#x2040
+    XML_START  ::= PN_CHARS_BASE | '_'
+	XML_MIDDLE ::= PN_CHARS_BASE | '_' | '.' | '-' | [0-9] | #xB7 | #x300-#x367 | #x203F-#x2040
 	XML_LAST   ::= XML_MIDDLE
 
 
