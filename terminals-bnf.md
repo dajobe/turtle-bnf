@@ -74,7 +74,9 @@ SPARQL 1.1 VarName
 
 http://www.w3.org/TR/2012/PR-sparql11-query-20121108/#rVARNAME
 
-    [166] VARNAME ::= ( PN_CHARS_U | [0-9] ) ( PN_CHARS_U | [0-9] | #x00B7 | [#x0300-#x036F] | [#x203F-#x2040] )*
+    VARNAME       ::= VARNAME_START VARNAME_REST*
+    VARNAME_START ::= PN_CHARS_BASE | '_' | [0-9]
+    VARNAME_REST  ::= PN_CHARS_BASE | '_' | [0-9] | #x00B7 | [#x0300-#x036F] | [#x203F-#x2040]
 
 
 General name checking rules
