@@ -1,5 +1,5 @@
-Turtle Terminals Used by the grammar
-====================================
+Turtle / SPARQL Terminals Used by the grammar
+=============================================
 
     ANON                    ::= '[' WS* ']'
     BLANK_NODE_LABEL        ::= '_:' BN_LABEL
@@ -22,8 +22,8 @@ Where
   * #x5C = \
 
 
-Turtle Terminals Only used inside terminals
-===========================================
+Turtle / SPARQL Terminals Only used inside terminals
+====================================================
 
     EXPONENT         ::= [eE] [+-]? [0-9]+
     UCHAR            ::= '\u' HEX HEX HEX HEX | '\U' HEX HEX HEX HEX HEX HEX HEX HEX
@@ -67,8 +67,8 @@ XML 1.1 QNames
     XML_MIDDLE ::= PN_CHARS | '.'
     XML_LAST   ::= PN_CHARS | '.'
 
-SPARQL 1.1 VarName
-------------------
+SPARQL 1.1 Variable Name
+------------------------
 
 http://www.w3.org/TR/2012/PR-sparql11-query-20121108/#rVARNAME
 
@@ -87,5 +87,7 @@ Default (Prefixed name rules):
 
 Flags:
    1. Allow _ and [0-9] at start (blank node; local name)
-   3. Allow ':' and hex and '\'+escapes everywhere (local name)
-   4. Allow '.' at end (XML name)
+   2. Allow ':' and hex and '\'+escapes everywhere (local name)
+   3. Allow '.' at end (XML name)
+   4. Forbid '-' at end (SPARQL Variable name)
+   
