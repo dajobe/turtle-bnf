@@ -64,7 +64,7 @@ Local name
 XML 1.1 QNames
 --------------
 
-    XML_NAME_BASE   ::= [A-Za-z_] + lots of Unicode ranges
+    XML_NAME_BASE   ::= PN_CHARS_BASE | '_'
 
     XML_START  ::= XML_NAME_BASE
 	XML_MIDDLE ::= XML_NAME_BASE | '.' | '-' | [0-9] | #xB7 | #x300-#x367 | #x203F-#x2040
