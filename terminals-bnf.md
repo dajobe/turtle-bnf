@@ -59,3 +59,15 @@ Local name
     PN_LOCAL_START   ::= PN_CHARS_BASE | '_' | [0-9] | ':' | PLX
     PN_LOCAL_MIDDLE  ::= PN_CHARS | '.' | ':' | PLX
     PN_LOCAL_LAST    ::= PN_CHARS | ':' | PLX
+
+General name checking rules
+---------------------------
+
+   * Start: *PN_CHARS_BASE* with flags
+   * Middle; *PN_CHARS* with flags
+   * Last: *PN_CHARS* always
+
+Flags:
+   1. Allow _ and [0-9] at start
+   2. Allow '.' at middle
+   3. Allow ':' and PLX (hex and '\' + escapes) everywhere
