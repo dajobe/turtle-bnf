@@ -15,6 +15,12 @@ Terminals Used by the grammar
     STRING_LITERAL_QUOTE             ::= '"' ([^#x22#x5C#xA#xD] | ECHAR | UCHAR)* '"'
     STRING_LITERAL_SINGLE_QUOTE      ::= "'" ([^#x27#x5C#xA#xD] | ECHAR | UCHAR)* "'"
 
+Where
+
+  * #x22 = " (double quote)
+  * #x22 = ' (single quote)
+  * #x5C = \
+
 
 Terminals Only used inside terminals
 ====================================
