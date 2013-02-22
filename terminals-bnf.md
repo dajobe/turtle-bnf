@@ -65,7 +65,7 @@ XML 1.1 QNames
 --------------
 
     XML_START  ::= PN_CHARS_BASE | '_'
-	XML_MIDDLE ::= PN_CHARS_BASE | '_' | '.' | '-' | [0-9] | #xB7 | #x300-#x367 | #x203F-#x2040
+	XML_MIDDLE ::= PN_CHARS_BASE | '_' | '-' | [0-9] | #xB7 | #x300-#x367 | #x203F-#x2040 | '.'
 	XML_LAST   ::= XML_MIDDLE
 
 
