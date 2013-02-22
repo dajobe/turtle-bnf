@@ -36,15 +36,15 @@ Turtle / SPARQL Terminals Only used inside terminals
     PLX              ::= '%' HEX HEX | '\' ('_' | '~' | '.' | '-' | '!' | '$' | '&' | "'" | '(' | ')' | '*' | '+' | ',' | ';' | '=' | '/' | '?' | '#' | '@' | '%')
     HEX              ::= [0-9] | [A-F] | [a-f]
 
-Turtle / SPARQL Blank node names
---------------------------------
+Turtle / SPARQL Blank node Name
+-------------------------------
 
     BN_LABEL         ::= BN_LABEL_START (BN_LABEL_MIDDLE* BN_LABEL_LAST)?
     BN_LABEL_START   ::= PN_CHARS_BASE | '_' | [0-9]
     BN_LABEL_MIDDLE  ::= PN_CHARS | '.'
     BN_LABEL_LAST    ::= PN_CHARS
 
-Turtle / SPARQL Prefixed name
+Turtle / SPARQL Prefixed Name
 -----------------------------
 
     PN_PREFIX        ::= PN_PREFIX_START (PN_PREFIX_MIDDLE* PN_PREFIX_LAST)?
@@ -52,7 +52,7 @@ Turtle / SPARQL Prefixed name
     PN_PREFIX_MIDDLE ::= PN_CHARS | '.'
     PN_PREFIX_LAST   ::= PN_CHARS
 
-Turtle / SPARQL Local name
+Turtle / SPARQL Local Name
 --------------------------
 
     PN_LOCAL         ::= PN_LOCAL_START (PN_LOCAL_MIDDLE* PN_LOCAL_LAST)?
@@ -80,14 +80,14 @@ http://www.w3.org/TR/2012/PR-sparql11-query-20121108/#rVARNAME
 General name checking rules
 ---------------------------
 
-Default (Prefixed name rules):
-   * Start: *PN_CHARS_BASE* with flags
-   * Middle: *PN_CHARS* | '.' (same as XML namechar) with flags
-   * Last: *PN_CHARS* always
+Default (Prefixed Name)
+   * Start: *PN_CHARS_BASE*
+   * Middle: *PN_CHARS* | '.' (same as XML namechar)
+   * Last: *PN_CHARS*
 
 Flags:
-   1. Allow _ and [0-9] at start (blank node; local name)
-   2. Allow ':' and hex and '\'+escapes everywhere (local name)
-   3. Allow '.' at end (XML name)
-   4. Forbid '-' at end (SPARQL Variable name)
+   1. Allow _ and [0-9] at start (Blank node Name; Local Name)
+   2. Allow ':' and hex and '\'+escapes everywhere (Local Name)
+   3. Allow '.' at end (XML QName)
+   4. Forbid '-' at middle and end (SPARQL Variable Name)
    
