@@ -65,8 +65,8 @@ XML 1.1 QNames
 --------------
 
     XML_START  ::= PN_CHARS_BASE | '_'
-	XML_MIDDLE ::= PN_CHARS_BASE | '_' | '-' | [0-9] | #x00B7 | [#x0300-#x036F] | [#x203F-#x2040] | '.'
-	XML_LAST   ::= XML_MIDDLE
+	XML_MIDDLE ::= PN_CHARS | '.'
+	XML_LAST   ::= PN_CHARS | '.'
 
 
 General name checking rules
