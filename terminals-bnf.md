@@ -63,6 +63,7 @@ Turtle / SPARQL Local Name
 XML 1.1 QNames
 --------------
 
+    XML_NAME   ::= XML_START (XML_MIDDLE* XML_LAST)?
     XML_START  ::= PN_CHARS_BASE | '_'
     XML_MIDDLE ::= PN_CHARS | '.'
     XML_LAST   ::= PN_CHARS | '.'
